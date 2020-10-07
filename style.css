@@ -241,7 +241,7 @@ video {
 	float: left;
 	border: 0;
 	border-right: 1px solid #b1b1b1;
-	background-image: url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_player.gif);
+	background-image: url(https://raw.githubusercontent.com/macfrombv/youtubehtml5player/main/sprite_player.gif);
 	padding: 0;
 	margin: 0;
 	display: block;
@@ -259,7 +259,7 @@ video {
 	float: left;
 	border: 0;
 	border-right: 1px solid #b1b1b1;
-	background-image: url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_player.gif);
+	background-image: url(https://raw.githubusercontent.com/macfrombv/youtubehtml5player/main/sprite_player.gif);
 	padding: 0;
 	margin: 0;
 	display: block;
@@ -278,7 +278,7 @@ video {
 	border: 0;
 	border-left: 1px solid #eee;
 	border-right: 1px solid #b1b1b1;
-	background-image: url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_player.gif);
+	background-image: url(https://raw.githubusercontent.com/macfrombv/youtubehtml5player/main/sprite_player.gif);
 	padding: 0;
 	margin: 0;
 	display: block;
@@ -296,7 +296,7 @@ video {
 	float: left;
 	border: 0;
 	border-left: 1px solid #eee;
-	background-image: url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_player.gif);
+	background-image: url(https://raw.githubusercontent.com/macfrombv/youtubehtml5player/main/sprite_player.gif);
 	padding: 0;
 	margin: 0;
 	display: block;
@@ -315,7 +315,7 @@ video {
 	border: 0;
 	border-left: 1px solid #eee;
 	border-right: 1px solid #b1b1b1;
-	background-image: url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_player.gif);
+	background-image: url(https://raw.githubusercontent.com/macfrombv/youtubehtml5player/main/sprite_player.gif);
 	padding: 0;
 	margin: 0;
 	display: block;
@@ -334,7 +334,7 @@ video {
 	border: 0;
 	border-left: 1px solid #eee;
 	border-right: 1px solid #b1b1b1;
-	background-image: url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_player.gif);
+	background-image: url(https://raw.githubusercontent.com/macfrombv/youtubehtml5player/main/sprite_player.gif);
 	padding: 0;
 	margin: 0;
 	display: block;
@@ -403,7 +403,7 @@ video {
 	float:left;
 	height: 23px;
 	width: 476px;
-	background-image: url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_player.gif);
+	background-image: url(https://raw.githubusercontent.com/macfrombv/youtubehtml5player/main/sprite_player.gif);
 	border-left: 1px solid #eee;
 	border-right: 1px solid #b1b1b1;
 }
@@ -417,14 +417,14 @@ video {
 	border-top: 1px solid #bdbdbd;
 	border-right: 1px solid #eaeaea;
 	border-bottom: 1px solid #eaeaea;
-	background-image: url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_player.gif);
+	background-image: url(https://raw.githubusercontent.com/macfrombv/youtubehtml5player/main/sprite_player.gif);
 	background-position: 0 -60px;
 }
 #video-player .play-progress {
 	position: relative;
 	display: block;
 	height: 7px;
-	background-image: url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_player.gif);
+	background-image: url(https://raw.githubusercontent.com/macfrombv/youtubehtml5player/main/sprite_player.gif);
 	background-position: 0 -46px;
 	margin-top: -7px;
 }
@@ -432,7 +432,7 @@ video {
 	position: relative;
 	display: block;
 	height: 7px;
-	background-image: url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_player.gif);
+	background-image: url(https://raw.githubusercontent.com/macfrombv/youtubehtml5player/main/sprite_player.gif);
 	background-position: 0 -53px;
 	margin-top: 0px;
 }
@@ -453,7 +453,7 @@ video {
 	width: 16px;
 	height: 16px;
 	position: relative;
-	background-image: url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_player.gif);
+	background-image: url(https://raw.githubusercontent.com/macfrombv/youtubehtml5player/main/sprite_player.gif);
 	background-position: 0 -297px;
 	-webkit-user-select: none;
 }
@@ -462,7 +462,7 @@ video {
 }
 #video-player .volume-panel {
 	background-color: #eee;
-	background-image: url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_player.gif);
+	background-image: url(https://raw.githubusercontent.com/macfrombv/youtubehtml5player/main/sprite_player.gif);
 	background-position: -27px -313px;
 	border: 1px solid white;
 	border-bottom: 0;
@@ -476,7 +476,7 @@ video {
 #video-player .volume-channel {
 	position: relative;
 	background-color: #eee;
-	background-image: url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_player.gif);
+	background-image: url(https://raw.githubusercontent.com/macfrombv/youtubehtml5player/main/sprite_player.gif);
 	background-position: -54px -313px;
 	width: 6px;
 	height: 42px;
@@ -487,7 +487,7 @@ video {
 #video-player .volume-slider {
 	position: relative;
 	z-index: 1;
-	background-image: url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_player.gif);
+	background-image: url(https://raw.githubusercontent.com/macfrombv/youtubehtml5player/main/sprite_player.gif);
 	background-position: -44px -297px;
 	margin-left: 
 	width: 20px;
