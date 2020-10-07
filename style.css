@@ -507,7 +507,7 @@ video {
 }
 #video-player .rating-stars {
 	display: inline-block;
-	background: #fff url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_master.png) no-repeat scroll 0 -426px;   
+	background: #fff url(https://raw.githubusercontent.com/macfrombv/youtubehtml5player/main/sprite_master.png) no-repeat scroll 0 -426px;   
 	width: 75px;
 	height: 15px;
 	margin-right: 5px;
@@ -717,11 +717,11 @@ video {
 	width: 18px;
 	height: 18px;
 	border: 0;
-	background: #fff url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_master.png) no-repeat scroll 0 -268px;
+	background: #fff url(https://raw.githubusercontent.com/macfrombv/youtubehtml5player/main/sprite_master.png) no-repeat scroll 0 -268px;
 	cursor: pointer;
 }
 #customize-embed-button:hover {
-	background: #fff url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_master.png) no-repeat scroll -18px -268px;
+	background: #fff url(https://raw.githubusercontent.com/macfrombv/youtubehtml5player/main/sprite_master.png) no-repeat scroll -18px -268px;
 }
 #action-box {
 	border: 1px solid #ccc;
@@ -743,7 +743,7 @@ video {
 	margin-right: 30px;
 }
 #action-box .arrow {
-	background: #fff url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_master.png) no-repeat scroll -1px -133px;
+	background: #fff url(https://raw.githubusercontent.com/macfrombv/youtubehtml5player/main/sprite_master.png) no-repeat scroll -1px -133px;
 	display: block;
 	position: absolute;
 	z-index: 1;
@@ -763,39 +763,26 @@ video {
 	margin-right: 5px;
 }
 #favorite-action-link .icon {
-	background: #fff url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_master.png) no-repeat scroll 0 -227px;
+	background: #fff url(https://raw.githubusercontent.com/macfrombv/youtubehtml5player/main/sprite_master.png) no-repeat scroll 0 -227px;
 }
 #favorite-action-link:hover .icon {
-	background: #fff url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_master.png) no-repeat scroll 0 -237px;
+	background: #fff url(https://raw.githubusercontent.com/macfrombv/youtubehtml5player/main/sprite_master.png) no-repeat scroll 0 -237px;
 }
 #share-action-link .icon {
-	background: #fff url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_master.png) no-repeat scroll -17px -237px;
+	background: #fff url(https://raw.githubusercontent.com/macfrombv/youtubehtml5player/main/sprite_master.png) no-repeat scroll -17px -237px;
 }
 #share-action-link:hover .icon {
-	background: #fff url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_master.png) no-repeat scroll -17px -237px;
+	background: #fff url(https://raw.githubusercontent.com/macfrombv/youtubehtml5player/main/sprite_master.png) no-repeat scroll -17px -237px;
 }
 #playlists-action-link .icon {
-	background: #fff url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_master.png) no-repeat scroll -34px -227px;
+	background: #fff url(https://raw.githubusercontent.com/macfrombv/youtubehtml5player/main/sprite_master.png) no-repeat scroll -34px -227px;
 }
 #playlists-action-link:hover .icon {
-	background: #fff url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_master.png) no-repeat scroll -34px -237px;
+	background: #fff url(https://raw.githubusercontent.com/macfrombv/youtubehtml5player/main/sprite_master.png) no-repeat scroll -34px -237px;
 }
 #flag-action-link .icon {
-	background: #fff url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_master.png) no-repeat scroll -51px -227px;
+	background: #fff url(https://raw.githubusercontent.com/macfrombv/youtubehtml5player/main/sprite_master.png) no-repeat scroll -51px -227px;
 }
 #flag-action-link:hover .icon {
-	background: #fff url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_master.png) no-repeat scroll -51px -237px;
+	background: #fff url(https://raw.githubusercontent.com/macfrombv/youtubehtml5player/main/sprite_master.png) no-repeat scroll -51px -237px;
 }
-
-playback timings (ms):
-  exclusion.robots: 0.352
-  LoadShardBlock: 254.526 (3)
-  load_resource: 659.332
-  captures_list: 280.069
-  RedisCDXSource: 1.403
-  esindex: 0.011
-  PetaboxLoader3.resolve: 701.885 (3)
-  exclusion.robots.policy: 0.34
-  PetaboxLoader3.datanode: 208.655 (4)
-  CDXLines.iter: 20.148 (3)
-*/
