@@ -58,7 +58,7 @@ hr {
 #global-nav {
 	display: block;
 	border: 1px solid #999;
-	background: #fff url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_master.png) repeat-x scroll 0 -487px;
+	background: #fff url(https://raw.githubusercontent.com/macfrombv/youtubehtml5player/main/sprite_master.png) repeat-x scroll 0 -487px;
 	text-align: center;
 	height: 35px;
 	margin: 0 0 5px 0;
@@ -93,10 +93,10 @@ hr {
 	padding: 10px;
 }
 .nav-button:hover {
-	background: #fff url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_master.png) repeat-x scroll 0 -522px;	
+	background: #fff url(https://raw.githubusercontent.com/macfrombv/youtubehtml5player/main/sprite_master.png) repeat-x scroll 0 -522px;	
 }
 .nav-button:active {
-	background: #fff url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_master.png) repeat-x scroll 0 -557px;
+	background: #fff url(https://raw.githubusercontent.com/macfrombv/youtubehtml5player/main/sprite_master.png) repeat-x scroll 0 -557px;
 }
 
 .blue-button {
@@ -104,7 +104,7 @@ hr {
 	font-size: 12px;
 	font-weight: bold;
 	border: 1px solid #a0b1dc;
-	background: #a0b1dc url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_master.png) repeat-x scroll 0 -1600px;
+	background: #a0b1dc url(https://raw.githubusercontent.com/macfrombv/youtubehtml5player/main/sprite_master.png) repeat-x scroll 0 -1600px;
 	padding: 4px 12px;
 	height: 100%;
 	-webkit-border-radius: 4px;
@@ -112,11 +112,11 @@ hr {
 }
 .blue-button:hover {
 	text-decoration: underline;
-	background: #a0b1dc url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_master.png) repeat-x scroll 0 -1800px;
+	background: #a0b1dc url(https://raw.githubusercontent.com/macfrombv/youtubehtml5player/main/sprite_master.png) repeat-x scroll 0 -1800px;
 }
 .blue-button:active {
 	text-decoration: underline;
-	background: #a0b1dc url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_master.png) repeat-x scroll 0 -2000px;
+	background: #a0b1dc url(https://raw.githubusercontent.com/macfrombv/youtubehtml5player/main/sprite_master.png) repeat-x scroll 0 -2000px;
 }
 
 .yellow-button {
@@ -124,18 +124,18 @@ hr {
 	font-size: 12px;
 	font-weight: bold;
 	border: 1px solid #ecc101;
-	background: #ecc101 url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_master.png) repeat-x scroll 0 -2200px;
+	background: #ecc101 url(https://raw.githubusercontent.com/macfrombv/youtubehtml5player/main/sprite_master.png) repeat-x scroll 0 -2200px;
 	padding: 4px 12px;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
 }
 .yellow-button:hover {
 	text-decoration: underline;
-	background: #ecc101 url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_master.png) repeat-x scroll 0 -2400px;
+	background: #ecc101 url(https://raw.githubusercontent.com/macfrombv/youtubehtml5player/main/sprite_master.png) repeat-x scroll 0 -2400px;
 }
 .yellow-button:active {
 	text-decoration: underline;
-	background: #ecc101 url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_master.png) repeat-x scroll 0 -2600px;
+	background: #ecc101 url(https://raw.githubusercontent.com/macfrombv/youtubehtml5player/main/sprite_master.png) repeat-x scroll 0 -2600px;
 }
 
 .details {
@@ -154,11 +154,11 @@ hr {
 	font-weight: bold;
 	display: inline-block;
 	padding: 0 0 0 20px !important;
-	background: #fff url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_master.png) no-repeat scroll 4px -342px;
+	background: #fff url(https://raw.githubusercontent.com/macfrombv/youtubehtml5player/main/sprite_master.png) no-repeat scroll 4px -342px;
 	cursor: pointer !important;
 }
 .details.open .legend {
-	background: #fff url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_master.png) no-repeat scroll 0 -318px;
+	background: #fff url(https://raw.githubusercontent.com/macfrombv/youtubehtml5player/main/sprite_master.png) no-repeat scroll 0 -318px;
 }
 
 
