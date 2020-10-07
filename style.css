@@ -1,0 +1,801 @@
+/* Copyright 2008 Google Inc. */
+/* All Rights Reserved. */
+
+/**
+ * Demo for HTML5 video tag.
+ * Author: czacharias@google.com (Chris Zacharias)
+ */
+body {
+	width: 960px;
+	margin: 15px auto;
+	font-size: 12px;
+	font-family: Arial, sans-serif;
+}
+a, a:active, a:visited {
+	color: #03c;
+	text-decoration: none;
+}
+a:hover {
+	color: #03c;
+	text-decoration: underline;
+}
+
+article,
+section,
+header, 
+footer,
+dialog {
+	display: block;
+}
+
+var {
+	font-style: normal;
+}
+
+hr {
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin-bottom: 10px;
+}
+
+.tooltip {
+	  
+}
+
+#global-header {
+	display: block;
+	margin-bottom: 5px;
+}
+#global-title {
+	clear: none;
+	float: right;
+	margin: 0;
+	padding: 0;
+	color: #444;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+#global-nav {
+	display: block;
+	border: 1px solid #999;
+	background: #fff url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_master.png) repeat-x scroll 0 -487px;
+	text-align: center;
+	height: 35px;
+	margin: 0 0 5px 0;
+}
+#search-form {
+	display: inline-block;
+	margin: 4px;
+}
+#search-button {
+	vertical-align: middle;
+}
+#search-textbox {
+	vertical-align: middle;
+	border: 1px solid #999;
+	width: 280px;
+	font-size: 18px;
+}
+#upload-button {
+	float: right;
+	margin: 4px;
+}
+
+.nav-button {
+	float: left;
+	border-left: 1px solid #fff;
+	border-right: 1px solid #999;
+	display: inline-block;
+	text-decoration: none;
+	font-size: 13px;
+	font-weight: bold;
+	vertical-align: middle;
+	padding: 10px;
+}
+.nav-button:hover {
+	background: #fff url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_master.png) repeat-x scroll 0 -522px;	
+}
+.nav-button:active {
+	background: #fff url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_master.png) repeat-x scroll 0 -557px;
+}
+
+.blue-button {
+	color: #039;
+	font-size: 12px;
+	font-weight: bold;
+	border: 1px solid #a0b1dc;
+	background: #a0b1dc url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_master.png) repeat-x scroll 0 -1600px;
+	padding: 4px 12px;
+	height: 100%;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+}
+.blue-button:hover {
+	text-decoration: underline;
+	background: #a0b1dc url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_master.png) repeat-x scroll 0 -1800px;
+}
+.blue-button:active {
+	text-decoration: underline;
+	background: #a0b1dc url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_master.png) repeat-x scroll 0 -2000px;
+}
+
+.yellow-button {
+	color: #a24800;
+	font-size: 12px;
+	font-weight: bold;
+	border: 1px solid #ecc101;
+	background: #ecc101 url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_master.png) repeat-x scroll 0 -2200px;
+	padding: 4px 12px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+}
+.yellow-button:hover {
+	text-decoration: underline;
+	background: #ecc101 url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_master.png) repeat-x scroll 0 -2400px;
+}
+.yellow-button:active {
+	text-decoration: underline;
+	background: #ecc101 url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_master.png) repeat-x scroll 0 -2600px;
+}
+
+.details {
+	margin-bottom: 10px;
+}
+.details>div {
+	display: none;
+	margin-top: 5px;
+	padding: 5px;
+}
+.details.open>div {
+	display: block;
+}
+.details .legend {
+	font-size: 16px !important;
+	font-weight: bold;
+	display: inline-block;
+	padding: 0 0 0 20px !important;
+	background: #fff url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_master.png) no-repeat scroll 4px -342px;
+	cursor: pointer !important;
+}
+.details.open .legend {
+	background: #fff url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_master.png) no-repeat scroll 0 -318px;
+}
+
+
+
+video {
+	display: block;
+}
+
+.video-item {
+	display: block;
+	padding: 0;
+	margin: 0 0 5px 0;
+	width: 100%;
+	overflow: hidden;
+}
+
+.video-thumb {
+	float: left;
+	background-color: black;
+	border: 1px solid #999;
+	padding: 1px;
+	margin-right: 5px;
+	cursor: pointer;
+	width: 90px;
+	height: 54px;
+}
+.video-title {
+	display: block;
+	font-weight: bold;
+}
+.video-viewcount {
+	color: #999;
+	display: block;
+}
+.video-username {
+}
+
+#watch-page {
+	width: 960px;
+	overflow: auto;
+}
+
+#watch-page h1 {
+	margin: 0;
+	padding: 5px 0;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#main-content {
+	float: left;
+	width: 640px;
+	margin-right: 20px;
+}
+
+#side-content {
+	float: left;
+	width: 300px;
+}
+
+#video-player {
+	width: 640px; 
+}
+#video-player video {
+	display: block;
+	width: 640px;
+	height: 360px;
+	background-color: black;
+}
+
+#video-player .controls {
+	border: 1px solid #b1b1b1;
+	height: 23px;
+	margin-bottom: 10px;
+}
+#video-player .play-button {
+	background-position: 0 -67px;
+	width: 29px;
+	height: 23px;
+	float: left;
+	border: 0;
+	border-right: 1px solid #b1b1b1;
+	background-image: url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_player.gif);
+	padding: 0;
+	margin: 0;
+	display: block;
+}
+#video-player .play-button:hover {
+	background-position: -28px -67px;
+}
+#video-player .play-button:active {
+	background-position: -56px -67px;
+}
+#video-player .pause-button {
+	background-position: 0 -90px;
+	width: 29px;
+	height: 23px;
+	float: left;
+	border: 0;
+	border-right: 1px solid #b1b1b1;
+	background-image: url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_player.gif);
+	padding: 0;
+	margin: 0;
+	display: block;
+}
+#video-player .pause-button:hover {
+	background-position: -28px -90px;
+}
+#video-player .pause-button:active {
+	background-position: -56px -90px;
+}
+#video-player .fullscreen-button {
+	background-position: 0 -113px;
+	width: 33px;
+	height: 23px;
+	float: left;
+	border: 0;
+	border-left: 1px solid #eee;
+	border-right: 1px solid #b1b1b1;
+	background-image: url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_player.gif);
+	padding: 0;
+	margin: 0;
+	display: block;
+}
+#video-player .fullscreen-button:hover {
+	background-position: -31px -113px;
+}
+#video-player .fullscreen-button:active {
+	background-position: -62px -113px;
+}
+#video-player .menu-button {
+	background-position: 0 -136px;
+	width: 34px;
+	height: 23px;
+	float: left;
+	border: 0;
+	border-left: 1px solid #eee;
+	background-image: url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_player.gif);
+	padding: 0;
+	margin: 0;
+	display: block;
+}
+#video-player .menu-button:hover {
+	background-position: -32px -136px;
+}
+#video-player .menu-button:active {
+	background-position: -64px -136px;
+}
+#video-player .hd-button {
+	background-position: 0 -159px;
+	width: 32px;
+	height: 23px;
+	float: left;
+	border: 0;
+	border-left: 1px solid #eee;
+	border-right: 1px solid #b1b1b1;
+	background-image: url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_player.gif);
+	padding: 0;
+	margin: 0;
+	display: block;
+}
+#video-player .hd-button:hover {
+	background-position: -30px -159px;
+}
+#video-player .hd-button:active,
+#video-player .hd-button[value=on] {
+	background-position: -60px -159px;
+}
+#video-player .volume-button {
+	width: 32px;
+	height: 23px;
+	float: left;
+	border: 0;
+	border-left: 1px solid #eee;
+	border-right: 1px solid #b1b1b1;
+	background-image: url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_player.gif);
+	padding: 0;
+	margin: 0;
+	display: block;
+}
+#video-player .volume-button[value=max] {
+	background-position: 0 -182px;
+
+}
+#video-player .volume-button[value=max]:hover {
+	background-position: -30px -182px;
+}
+#video-player .volume-button[value=max]:active {
+	background-position: -60px -182px;
+}
+#video-player .volume-button[value=loud] {
+	background-position: 0 -205px;
+
+}
+#video-player .volume-button[value=loud]:hover {
+	background-position: -30px -205px;
+}
+#video-player .volume-button[value=loud]:active {
+	background-position: -60px -205px;
+}
+#video-player .volume-button[value=normal] {
+	background-position: 0 -228px;
+
+}
+#video-player .volume-button[value=normal]:hover {
+	background-position: -30px -228px;
+}
+#video-player .volume-button[value=normal]:active {
+	background-position: -60px -228px;
+}
+#video-player .volume-button[value=quiet] {
+	background-position: 0 -251px;
+}
+#video-player .volume-button[value=quiet]:hover {
+	background-position: -30px -251px;
+}
+#video-player .volume-button[value=quiet]:active {
+	background-position: -60px -251px;
+}
+#video-player .volume-button[value=min] {
+	background-position: 0 -274px;
+
+}
+#video-player .volume-button[value=min]:hover {
+	background-position: -30px -274px;
+}
+#video-player .volume-button[value=min]:active {
+	background-position: -60px -274px;
+}
+#video-player .volume-button[value=off] {
+	background-position: 0 -274px;
+
+}
+#video-player .volume-button[value=off]:hover {
+	background-position: -30px -274px;
+}
+#video-player .volume-button[value=off]:active {
+	background-position: -60px -274px;
+}
+#video-player .progress-bar {
+	display: block;
+	float:left;
+	height: 23px;
+	width: 476px;
+	background-image: url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_player.gif);
+	border-left: 1px solid #eee;
+	border-right: 1px solid #b1b1b1;
+}
+#video-player .progress-list {
+	display: block;
+	float: left;
+	width: 379px;
+	height: 7px;
+	margin: 7px 10px 0 10px;
+	border-left: 1px solid #bdbdbd;
+	border-top: 1px solid #bdbdbd;
+	border-right: 1px solid #eaeaea;
+	border-bottom: 1px solid #eaeaea;
+	background-image: url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_player.gif);
+	background-position: 0 -60px;
+}
+#video-player .play-progress {
+	position: relative;
+	display: block;
+	height: 7px;
+	background-image: url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_player.gif);
+	background-position: 0 -46px;
+	margin-top: -7px;
+}
+#video-player .load-progress {
+	position: relative;
+	display: block;
+	height: 7px;
+	background-image: url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_player.gif);
+	background-position: 0 -53px;
+	margin-top: 0px;
+}
+#video-player .progress-text {
+	font-family: Lucida Grande, Lucida San Unicode, Helvetica, Arial, sans-serif;
+	font-size: 10px;
+	display: block;
+	float: left;
+	width: 70px;
+	text-align: right;
+	padding: 5px 5px 0 0;
+}
+#video-player .scrubber-button {
+	border: 0;
+	padding: 0;
+	margin: -12px 0 0 -8px;
+	display: block;
+	width: 16px;
+	height: 16px;
+	position: relative;
+	background-image: url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_player.gif);
+	background-position: 0 -297px;
+	-webkit-user-select: none;
+}
+#video-player .volume-button:hover .volume-panel {
+	display: inherit;
+}
+#video-player .volume-panel {
+	background-color: #eee;
+	background-image: url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_player.gif);
+	background-position: -27px -313px;
+	border: 1px solid white;
+	border-bottom: 0;
+	height: 61px;
+	width: 27px;
+	margin-top: -74px;
+	position: absolute;
+	display: none;
+	text-align: center;
+}
+#video-player .volume-channel {
+	position: relative;
+	background-color: #eee;
+	background-image: url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_player.gif);
+	background-position: -54px -313px;
+	width: 6px;
+	height: 42px;
+	padding-bottom: 10px;
+	margin-left: 10px;
+	margin-top: 4px;
+}
+#video-player .volume-slider {
+	position: relative;
+	z-index: 1;
+	background-image: url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_player.gif);
+	background-position: -44px -297px;
+	margin-left: 
+	width: 20px;
+	height: 10px;
+	margin-left: -7px;
+	margin-top: -2px;
+	-webkit-user-select: none;
+}
+#video-player .video-fallback {
+	font-family: sans-serif;
+	color: white;
+	text-align: center;
+}
+#video-player .stats {
+	font-size: 13px;
+	margin-bottom: 10px;
+}
+#video-player .rating-stars {
+	display: inline-block;
+	background: #fff url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_master.png) no-repeat scroll 0 -426px;   
+	width: 75px;
+	height: 15px;
+	margin-right: 5px;
+	float: left;
+}
+#video-player .rating-count {
+	display: inline-block;
+	color: #666;
+	margin-top: 1px;
+}
+#video-player .view-count {
+	float: right;
+}
+
+#video-details {
+	background-color: #eee;
+	border: 1px solid #ccc;
+	padding: 5px;
+	width: auto;
+	overflow: auto;
+	font-size: 12px;
+	line-height: 16px;
+	margin-bottom: 8px;
+}
+
+#video-details .channel-icon {
+	float: left;
+	display: block;
+	background-color: white;
+	border: 1px solid #999;
+	padding: 1px;
+	margin: 2px 10px 5px 2px;
+}
+#video-details .channel-icon img {
+	display: block;
+	border: 1px solid #999;
+	width: 46px;
+	height: 46px;
+}
+#video-details .channel-name {
+	font-weight: bold;
+}
+#video-details .video-date {
+	display: block;
+}
+
+#video-details .video-description {
+	clear: both;
+	margin: 0 0 5px 0;
+	padding: 0;
+}
+#video-details .video-links {
+	border-top: 1px solid #ccc;
+	padding: 5px 0 0 0;
+}
+#video-details .video-link {
+	padding: 0;
+	margin: 0;
+}
+#video-details .video-link-title {
+	display: inline-block;
+	width: 50px;
+	margin-right: 5px;
+	color: #666;
+	font-weight: bold;
+	font-size: 11px;
+	text-align: right;
+}
+#video-details .video-link input {
+	width: 200px;
+	font-size: 10px;
+	color: #333;
+	border: 1px solid #ccc;
+}
+
+#subscribe-button {
+	float: right;
+}
+
+#footer-search-form {
+	border-top: 1px solid #ccc;
+	background-color: #eee;
+	text-align: center;
+	padding: 10px 0;
+	margin-top: 10px;
+}
+#footer-search-textbox {
+	width: 250px;
+	font-size: 18px;
+	vertical-align: middle;
+}
+
+#footer-links {
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	background-color: #eee;
+	padding: 15px;
+	width: 930px;
+	overflow: auto;
+}
+
+#footer-links h1 {
+	padding: 0;
+	margin: 0;
+	font-size: 11px;
+	line-height: 16px;
+	color: #333;
+}
+#footer-links p {
+	margin: 0;
+	padding: 0;
+	font-size: 11px;
+	line-height: 16px;
+}
+#footer-links a {
+	display: block;
+}
+#footer-links .group {
+	width: 33%;
+	float: left;
+	overflow: auto;
+}
+#footer-link .group {
+	border-left: 1px solid #ccc;
+}
+#footer-links .subgroup {
+	width: 50%;
+	float: left;
+}
+
+#copyright-notice {
+	text-align: center;
+}
+
+#morefrom-videos>div,
+#related-videos>div {
+	height: 310px;
+	max-height: 310px;
+	overflow: auto;
+	border: 1px solid #CCC;
+}
+
+#comments-pager {
+	background-color: #dedede;
+	padding: 5px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+#comments-pager .page-index {
+	display: inline-block;
+	margin-left: 10px;
+}
+#comments-pager .page-turner {
+	float: right;
+	margin-right: 4px;
+}
+#comments-list {
+	margin-bottom: 10px;
+}
+#comments-list .comment-age {
+	color: #666;
+}
+#comments-list .comment-author {
+    font-weight: bold;
+}
+#comments-list dt {
+	border-top: 1px dotted #ccc;
+	padding-top: 10px;
+}
+#comments-list dd {
+	padding: 0;
+	margin: 0;
+}
+#comments-list dt.reply { 
+	border-top: 0;
+	border-left: 2px solid #ccc;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: 0 0 0 10px;
+}
+#comments-list dt.reply + dd {
+	border-top: 0;
+	border-left: 2px solid #ccc;
+	margin-top: 0;
+	padding: 5px 0 0 10px;
+}
+#comments-links {
+	margin-bottom: 10px;
+}
+#comments-links a {
+	font-weight: bold;
+}
+#video-response-link {
+	float: right;
+}
+#comments-form h1 {
+	font-size: 14px;
+}
+#comment-textbox {
+	display: block;
+	width: 100%;
+	height: 100px;
+	margin-bottom: 5px;
+}
+#customize-embed-button {
+	margin-left: 2px;
+	width: 18px;
+	height: 18px;
+	border: 0;
+	background: #fff url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_master.png) no-repeat scroll 0 -268px;
+	cursor: pointer;
+}
+#customize-embed-button:hover {
+	background: #fff url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_master.png) no-repeat scroll -18px -268px;
+}
+#action-box {
+	border: 1px solid #ccc;
+	margin-bottom: 10px;
+}
+#action-box .actions {
+	padding: 10px;
+	margin: 0;
+}
+#favorite-action-box {
+	padding: 10px;
+	padding-left: 25px;
+	border-top: 1px solid #ccc;
+	background-color: #eee;
+	margin: 0;
+}
+#favorite-action-box a {
+	font-size: 11px;
+	margin-right: 30px;
+}
+#action-box .arrow {
+	background: #fff url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_master.png) no-repeat scroll -1px -133px;
+	display: block;
+	position: absolute;
+	z-index: 1;
+	width: 12px;
+	height: 8px;
+	margin: 29px 0 0 120px;
+}
+#action-box .action-link {
+	font-weight: bold;
+	font-size: 12px;
+	margin-right: 20px;
+}
+#action-box .action-link .icon {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	margin-right: 5px;
+}
+#favorite-action-link .icon {
+	background: #fff url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_master.png) no-repeat scroll 0 -227px;
+}
+#favorite-action-link:hover .icon {
+	background: #fff url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_master.png) no-repeat scroll 0 -237px;
+}
+#share-action-link .icon {
+	background: #fff url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_master.png) no-repeat scroll -17px -237px;
+}
+#share-action-link:hover .icon {
+	background: #fff url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_master.png) no-repeat scroll -17px -237px;
+}
+#playlists-action-link .icon {
+	background: #fff url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_master.png) no-repeat scroll -34px -227px;
+}
+#playlists-action-link:hover .icon {
+	background: #fff url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_master.png) no-repeat scroll -34px -237px;
+}
+#flag-action-link .icon {
+	background: #fff url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_master.png) no-repeat scroll -51px -227px;
+}
+#flag-action-link:hover .icon {
+	background: #fff url(/web/20090609003214im_/http://www.youtube.com/demo/sprite_master.png) no-repeat scroll -51px -237px;
+}
+
+playback timings (ms):
+  exclusion.robots: 0.352
+  LoadShardBlock: 254.526 (3)
+  load_resource: 659.332
+  captures_list: 280.069
+  RedisCDXSource: 1.403
+  esindex: 0.011
+  PetaboxLoader3.resolve: 701.885 (3)
+  exclusion.robots.policy: 0.34
+  PetaboxLoader3.datanode: 208.655 (4)
+  CDXLines.iter: 20.148 (3)
+*/
